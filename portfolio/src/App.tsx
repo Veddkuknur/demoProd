@@ -23,12 +23,11 @@ function App() {
   }, []);
 
   function getPath() {
-    const path = window.location.pathname;
-    return path + window.location.hash;
+    return window.location.hash || "#demoProd"; // fallback if hash is missing
   }
 
   const isValidPath = (path: string) => {
-    const validPaths = ["/", "/#workexperience", "/#projects", "/#extracurriculars", "/#home"];
+    const validPaths = ["#demoProd", "#workexperience", "#projects", "#extracurriculars"];
     return validPaths.includes(path);
   };
 
