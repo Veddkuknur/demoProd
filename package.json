@@ -1,10 +1,11 @@
 {
+  "homepage": "https://Veddkuknur.github.io/demoProd",
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build",
     "deploy": "touch out/.nojekyll && git add out && git commit -m 'Deploy static site' && git subtree push --prefix out origin gh-pages",
     "start": "next start",
     "lint": "next lint"
