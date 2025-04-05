@@ -27,11 +27,4 @@ jobs:
       - name: Build and Export site
         run: |
           npm run build
-          npm run export
-          touch out/.nojekyll
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./out
+          npm run deploy
